@@ -4,9 +4,53 @@
     <title>Virtual Mail</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<img src="images/FromMeToYou.png" style="height: 60%; width: auto; position: relative;" class="center">
+<body id="banner">
+    <div class="mail">
+        <div onClick="goToWritingLetterScene()" class="letter">
+            <img id="back_envelope" src="images/back_envelope.png">
+            <img id="front_envelope" src="images/front_envelope.png">
+            <img id="lid_one" src="images/lid_one.png">
+            <img id="lid_two" src="images/lid_two.png">
+            <img id="click_to_start_writing_button" src="images/click_to_start_writing.png">
+        </div>
 
-    <h1>virtual mail</h1>
+        <img id="memo_paper" src="images/memo_paper.jpg">
+        <form>
+            <textarea id="text" name="text" rows="17" cols="45" placeholder="Type your message..."></textarea>
+        </form>
+        <img onClick="goToSendingMailScene()" id="done_button" src="images/done_button.png">
+    </div>
+
+
+    <script>
+        let letter = document.getElementsByClassName('letter')[0];
+        let paper = document.getElementById('memo_paper');
+        let text = document.getElementById('text');
+        let done_button = document.getElementById('done_button');
+
+        function goToWritingLetterScene() {
+            letter.remove();
+            appearPaper();
+            appearDoneButton();
+        }
+
+        function appearPaper() {
+            paper.style.display = 'block';
+            text.style.display = 'block';
+        }
+
+        function appearDoneButton() {
+            done_button.style.display = 'block';
+        }
+
+        function goToSendingMailScene() {
+            paper.remove();
+            text.remove();
+            done_button.remove();
+        }
+
+    </script>
 
 </body>
 </html>
