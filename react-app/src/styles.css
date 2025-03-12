@@ -11,7 +11,7 @@
     height: 100vh;
     margin: 0px auto;
     overflow: hidden;
-    background: url(images/bunny_repeat_background.jpg);
+    background: url('/images/bunny_repeat_background.jpg');
     background-size: 100px 100px;
     background-repeat: repeat;
     animation: animate-background linear 17s infinite;
