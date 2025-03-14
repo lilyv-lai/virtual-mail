@@ -15,10 +15,6 @@ function CreateLetterPage() {
           <div className="mail">
               <img id="memo_paper" src="images/memo_paper.jpg" />
               <InsertForm />
-              {/* <form>
-                  <textarea id="text" name="text" rows="17" cols="45" placeholder="Type your message..."></textarea>
-              </form> */}
-              {/* <img id="done_button" src="images/done_button.png" /> */}
             </div>
         </div>
       );
